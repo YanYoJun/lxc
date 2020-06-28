@@ -3,29 +3,27 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/btn_event_bus"
+        <TextView
+            android:id="@+id/tv_event"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="EventBus"
+            android:text="显示Event消息"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_event_bus"
+        <Button
+            android:id="@+id/btn_event"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="event bus"
             android:layout_marginTop="10dp"
-            app:layout_constraintLeft_toLeftOf="@id/btn_event_bus"
-            app:layout_constraintTop_toBottomOf="@id/btn_event_bus" />
+            android:text="发送Event事件"
+            app:layout_constraintLeft_toLeftOf="@id/tv_event"
+            app:layout_constraintTop_toBottomOf="@id/tv_event" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
