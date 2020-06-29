@@ -23,14 +23,17 @@ class EventBusActivity : BaseActivity() {
     }
 
     private lateinit var binding: ActivityEventBusBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_event_bus)
+
+    override fun onActivityCreate(savedInstanceState: Bundle?) {
         LiveDataBus.get<String>(LiveDataBusKey.EVENT_BUS_TEST).observe(this, Observer {
             logcat("bus event:$it")
             binding.tvEvent.text = it
         })
         initClickListener()
+    }
+
+    override fun initContentView() {
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_event_bus)
     }
 
     private fun initClickListener() {
