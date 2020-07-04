@@ -35,4 +35,6 @@ abstract class BaseActivity : AppCompatActivity() {
         logcat("onTitleChanged:$title")
         mDisplay.setTitle(title.toString())
     }
+
+    fun getDisplay(): Display = mDisplay
 }

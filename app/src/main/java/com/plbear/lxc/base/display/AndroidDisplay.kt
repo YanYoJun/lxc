@@ -28,6 +28,10 @@ class AndroidDisplay(activity: AppCompatActivity) : Display {
         }
     }
 
+    override fun showUpButton(show: Boolean) {
+        mActivity.get()?.supportActionBar?.setDisplayHomeAsUpEnabled(show)
+    }
+
     override fun setTitle(title: String) {
         logcat("setTitle:$title")
         mActivity.get()?.supportActionBar?.setDisplayShowTitleEnabled(false)

@@ -9,4 +9,6 @@ interface Display {
     fun setSupportToolbar(toolbar: Toolbar?)
 
     fun setTitle(title:String)
+
+    fun showUpButton(show:Boolean)
 }

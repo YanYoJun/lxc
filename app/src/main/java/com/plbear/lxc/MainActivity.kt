@@ -22,6 +22,7 @@ class MainActivity : BaseActivity() {
             logcat("main activity:$it")
             binding.tvEventBus.text = it
         })
+        getDisplay().showUpButton(false)
     }
 
     override fun initContentView() {
