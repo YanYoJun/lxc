@@ -22,14 +22,29 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/include_toolbar" />
 
-        <TextView
-            android:id="@+id/tv_event_bus"
+        <Button
+            android:id="@+id/btn_on_draw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="event bus"
+            android:text="自定义控件"
             app:layout_constraintLeft_toLeftOf="@id/btn_event_bus"
             app:layout_constraintTop_toBottomOf="@id/btn_event_bus" />
+
+        <Button
+            android:id="@+id/btn_glide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Glide"
+            app:layout_constraintLeft_toLeftOf="@id/btn_event_bus"
+            app:layout_constraintTop_toBottomOf="@id/btn_on_draw" />
+
+        <Button
+            android:id="@+id/btn_dialog_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DialogFragment"
+            app:layout_constraintLeft_toLeftOf="@id/btn_event_bus"
+            app:layout_constraintTop_toBottomOf="@id/btn_glide" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
